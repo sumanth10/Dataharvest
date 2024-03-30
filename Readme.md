@@ -52,6 +52,8 @@ This ETL (Extract, Transform, Load) system is designed around the event-driven c
   - DataHarvest maintains a metastore and uses DynamoDB stream batching for scalability.
   - System can scale concurrently using batching of DynamoDB stream and Lambda functions.
   - New transformers can be accommodated by updating the metastore and changing filter criteria for the `dataharvest_catapult` lambda.
+
+  ![alt text](https://github.com/sumanth10/dataharvest/blob/main/dataharvest.png)
    
 #### Conclusion:
 This solution is a starting point to showcase the benefits of event-driven architecture in ETL systems. Please note that some components like `dataharvest_transaction_transformer` and `dataharvest_tax_transformer` are marked as unfinished due to incomplete implementation.
