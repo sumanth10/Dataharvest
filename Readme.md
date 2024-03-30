@@ -69,6 +69,8 @@ This solution is a starting point to showcase the benefits of event-driven archi
   - Retry mechanisms at both the code and function module levels enhance system reliability.
   - Scalability to accommodate multiple external clients is achieved by introducing a dedicated DynamoDB table to track their processing progress.
 
+ ![alt text](https://github.com/sumanth10/dataharvest/blob/main/dataharvest-solution.png)
+
 - **Advantages**:
   - **Chunk Processing**: Large files are segmented into manageable chunks for efficient processing.
   - **Concurrency**: Batching on streams enables parallel processing, harnessing Lambda's concurrency.
