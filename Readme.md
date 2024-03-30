@@ -58,4 +58,23 @@ This ETL (Extract, Transform, Load) system is designed around the event-driven c
 #### Conclusion:
 This solution is a starting point to showcase the benefits of event-driven architecture in ETL systems. Please note that some components like `dataharvest_transaction_transformer` and `dataharvest_tax_transformer` are marked as unfinished due to incomplete implementation.
 
+#### Solution 2
+
+**Objective**: Implement a more scalable and efficient data processing flow.[Code not implemented
+
+- **Description**:
+  - Solution 2 introduces significant scalability improvements compared to Solution 1.
+  - Large files are processed by chunking them into equal sizes, enabling efficient handling of substantial data volumes.
+  - Batching on DynamoDB streams and Kinesis streams is utilized, leveraging Lambda's concurrency to achieve scalability.
+  - Retry mechanisms at both the code and function module levels enhance system reliability.
+  - Scalability to accommodate multiple external clients is achieved by introducing a dedicated DynamoDB table to track their processing progress.
+
+- **Advantages**:
+  - **Chunk Processing**: Large files are segmented into manageable chunks for efficient processing.
+  - **Concurrency**: Batching on streams enables parallel processing, harnessing Lambda's concurrency.
+  - **Reliability**: Retry mechanisms ensure high reliability and fault tolerance.
+  - **Scalability**: Easily scales to handle multiple external clients with dedicated tracking.
+
+#### Conclusion:
+Both solutions for the ETL system use event-driven choreography. Solution 1 focuses on foundational event-driven architecture with scalability, while Solution 2 enhances scalability, reliability, and chunk-based processing for improved efficiency. Each solution offers unique benefits tailored to different requirements.
 
